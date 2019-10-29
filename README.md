@@ -32,9 +32,17 @@ Install the following node modules:
 Run the following commands:  
 ```
 http-server -c-1 -p 8080 --cors
-```
-```
 ngrok http 8080
 ```
 
+### 3. Change receiver application url
+Visit [https://cast.google.com/publish/](https://cast.google.com/publish/) and edit your application.  
+Change the application url with your website or ngrok url we just created.  
+![](https://i.imgur.com/zI0MP6K.png)  
+You might want to restart your chromecast ( Remove power for 10 seconds ) to avoid caching.
 
+### 4. Test your receiver
+Change your application ID inside the sender.html.  
+Navigate to http://localhost:8080/sender.html or ngrok endpoint and click the cast button.  
+
+Enjoy the crash!
