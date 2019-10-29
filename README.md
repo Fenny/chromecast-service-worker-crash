@@ -46,3 +46,7 @@ Change your application ID inside the sender.html.
 Navigate to http://localhost:8080/sender.html or ngrok endpoint and click the cast button.  
 
 Enjoy the crash!
+
+![](crash.gif)
+
+PS: It works in any other browser, just go to http://localhost:8080/receiver.html directly
