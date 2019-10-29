@@ -43,7 +43,7 @@ You might want to restart your chromecast ( Remove power for 10 seconds ) to avo
 
 ### 4. Test your receiver
 Change your application ID inside the sender.html.  
-Navigate to http://localhost:8080/sender.html or ngrok endpoint and click the cast button.  
+Navigate to http://localhost:8080/sender.html or ngrok endpoint and click the "Launch cast application" button.  
 
 Enjoy the crash!
 
