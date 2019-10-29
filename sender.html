@@ -7,10 +7,9 @@
     </style>
   </head>
   <body>
-    <button type="button" name="button" id="cast">Cast</button>
-    <video crossOrigin="anonymous" controls="true" muted="true" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" id="video">
+    <button type="button" name="button" id="cast">Launch cast application</button>
     <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
-    <script type="text/javascript" src="/chromecastjs.js"></script>
+    <script src="https://fenny.github.io/ChromecastJS/chromecastjs.min.js"></script>
     <script type="text/javascript">
       // Replace your application ID
       var cc = new ChromecastJS('origin_scoped', '4952EC9D')
