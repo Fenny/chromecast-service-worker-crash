@@ -7,11 +7,30 @@
     </style>
   </head>
   <body>
-    <button id="cast">Launch cast application</button>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.20/peer.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webtorrent/0.107.16/webtorrent.min.js"></script>
+    <button type="button" name="button" id="cast">Cast</button>
+    <video crossOrigin="anonymous" controls="true" muted="true" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" id="video">
     <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
     <script type="text/javascript" src="/chromecastjs.js"></script>
-    <script type="text/javascript" src="/sender.js"></script>
+    <script type="text/javascript">
+      // Replace your application ID
+      var cc = new ChromecastJS('origin_scoped', '4952EC9D')
+      // Some events
+      cc.on('available', () => {
+        console.log('cc available')
+      })
+      cc.on('connected', () => {
+        console.log('cc connected')
+      })
+      cc.on('error', (err) => {
+        console.log('cc', err)
+      })
+      
+      document.getElementById('cast').addEventListener('click', () => {
+        // Launch application, content cannot be empty because of the fennyjs cc library ( ignore this )
+        cc.cast({
+          content: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4'
+        })
+      })
+    </script>
   </body>
 </html>
