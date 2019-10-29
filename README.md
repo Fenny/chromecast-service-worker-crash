@@ -47,6 +47,7 @@ Navigate to http://localhost:8080/sender.html or ngrok endpoint and click the "L
 
 Enjoy the crash!
 
-![](crash.gif)
+![](crash.gif)  
+The above gif was running on cast firmware ***1.42.172094***
 
 PS: It works in any other browser, just go to http://localhost:8080/receiver.html directly
